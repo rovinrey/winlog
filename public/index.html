@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f6f1">
+    <meta name="description" content="A calm place to notice progress and plan what comes next.">
+    <title>Overview · WinLog</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/app.js" type="module"></script>
+    <script src="/js/dashboard.js" type="module"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="/" aria-label="WinLog home"><span class="brand-mark">w</span><span>winlog<span class="brand-period">.</span></span></a>
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="/" data-nav="overview"><span class="nav-icon">◫</span>Overview</a>
+          <a class="nav-link" href="/wins" data-nav="wins"><span class="nav-icon">✳</span>My wins</a>
+          <a class="nav-link" href="/tasks" data-nav="tasks"><span class="nav-icon">▣</span>Tasks</a>
+        </nav>
+        <div class="sidebar-note"><span class="note-spark">✦</span><p>Small steps still<br>move you forward.</p><span class="note-caption">KEEP SHOWING UP</span></div>
+        <div class="profile"><span class="avatar">W</span><span><strong>Your space</strong><small>Personal workspace</small></span><span class="profile-dots">···</span></div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar"><span class="breadcrumb">Workspace <span>/</span> Overview</span><span class="today-label" data-today></span></header>
+        <section class="page-heading"><div><p class="eyebrow">A LITTLE PROGRESS, EVERY DAY</p><h1>Good things are <em>adding up.</em></h1><p class="heading-copy">Take a breath. Look how far you’ve come — then choose what’s next.</p></div><a class="button button-primary" href="/tasks"><span>＋</span> Add a task</a></section>
+        <section class="stats-grid" aria-label="Your progress">
+          <article class="stat-card stat-wins"><span class="stat-icon">✳</span><span class="stat-label">WINS CELEBRATED</span><strong class="stat-number" id="win-count">—</strong><span class="stat-foot">Every win counts</span><span class="stat-decoration">✳</span></article>
+          <article class="stat-card stat-open"><span class="stat-icon">▣</span><span class="stat-label">OPEN TASKS</span><strong class="stat-number" id="task-count">—</strong><span class="stat-foot">One step at a time</span><span class="stat-decoration">○</span></article>
+          <article class="stat-card stat-done"><span class="stat-icon">✓</span><span class="stat-label">TASKS COMPLETED</span><strong class="stat-number" id="done-count">—</strong><span class="stat-foot">Look at you go</span><span class="stat-decoration">↗</span></article>
+        </section>
+        <div class="dashboard-grid">
+          <section class="panel wins-panel"><div class="panel-heading"><div><p class="eyebrow">MOMENTS THAT MATTER</p><h2>Recent wins <span class="heading-flower">✳</span></h2></div><a class="text-link" href="/wins">All wins <span>→</span></a></div><div class="preview-list" id="recent-wins"><div class="loading">Gathering your wins…</div></div><a class="panel-cta" href="/wins"><span class="cta-plus">＋</span> Capture a small win</a></section>
+          <section class="panel tasks-panel"><div class="panel-heading"><div><p class="eyebrow">YOUR NEXT STEPS</p><h2>Up next <span class="heading-check">✓</span></h2></div><a class="text-link" href="/tasks">All tasks <span>→</span></a></div><div class="preview-list" id="upcoming-tasks"><div class="loading">Finding your next steps…</div></div><a class="panel-cta" href="/tasks"><span class="cta-plus">＋</span> Make a little plan</a></section>
+        </div>
+        <p class="page-footer">You don’t have to do it all today. <span>Just the next small thing.</span></p>
+        <div class="toast" role="status" aria-live="polite" data-toast></div>
+      </main>
+    </div>
+  </body>
+</html>

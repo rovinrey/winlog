@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Celebrate and remember the progress you've made.">
+    <title>My wins · WinLog</title><link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/app.js" type="module"></script><script src="/js/wins.js" type="module"></script>
+  </head>
+  <body><div class="app-shell">
+    <aside class="sidebar"><a class="brand" href="/" aria-label="WinLog home"><span class="brand-mark">w</span><span>winlog<span class="brand-period">.</span></span></a><p class="nav-label">WORKSPACE</p><nav class="main-nav" aria-label="Main navigation"><a class="nav-link" href="/" data-nav="overview"><span class="nav-icon">◫</span>Overview</a><a class="nav-link" href="/wins" data-nav="wins"><span class="nav-icon">✳</span>My wins</a><a class="nav-link" href="/tasks" data-nav="tasks"><span class="nav-icon">▣</span>Tasks</a></nav><div class="sidebar-note"><span class="note-spark">✦</span><p>Small steps still<br>move you forward.</p><span class="note-caption">KEEP SHOWING UP</span></div><div class="profile"><span class="avatar">W</span><span><strong>Your space</strong><small>Personal workspace</small></span><span class="profile-dots">···</span></div></aside>
+    <main class="main-content"><header class="topbar"><span class="breadcrumb">Workspace <span>/</span> My wins</span><span class="today-label" data-today></span></header>
+      <section class="page-heading"><div><p class="eyebrow">MOMENTS THAT MATTER</p><h1>Your wins, <em>big and small.</em></h1><p class="heading-copy">A reminder that progress is happening, even when it’s quiet.</p></div><button class="button button-primary" type="button" data-open-form><span>＋</span> Capture a win</button></section>
+      <section class="panel collection-panel"><div class="panel-heading collection-heading"><div><p class="eyebrow">YOUR HIGHLIGHTS</p><h2>All the good stuff <span class="heading-flower">✳</span></h2></div><label class="filter-label">FROM <input type="date" id="win-from" aria-label="Filter wins from date"></label><label class="filter-label">TO <input type="date" id="win-to" aria-label="Filter wins to date"></label></div><div class="collection-list" id="wins-list"><div class="loading">Loading your wins…</div></div></section>
+      <dialog class="form-dialog" id="win-dialog"><form id="win-form"><div class="dialog-heading"><div><p class="eyebrow">SAVE THIS MOMENT</p><h2 id="win-dialog-title">A win worth keeping</h2></div><button class="icon-button" type="button" data-close-form aria-label="Close">×</button></div><input type="hidden" name="id"><label>What went well?<input name="title" required maxlength="120" placeholder="I finally…"></label><label>A little more detail <span class="optional">(optional)</span><textarea name="notes" rows="4" maxlength="2000" placeholder="What made this meaningful?"></textarea></label><label>When did it happen?<input name="won_on" type="date" required></label><p class="form-error" data-form-error role="alert"></p><div class="dialog-actions"><button type="button" class="button button-quiet" data-close-form>Cancel</button><button class="button button-primary" type="submit">Save this win</button></div></form></dialog>
+      <div class="toast" role="status" aria-live="polite" data-toast></div>
+    </main>
+  </div></body>
+</html>
